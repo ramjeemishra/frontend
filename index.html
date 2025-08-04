@@ -1402,24 +1402,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 </head>
 
 <body>
-  <div class="hef" id="editableDiv" contenteditable="true">Ramjee Mishra</div>
+  <div class="hef">Ramjee Mishra</div>
   <div id="root"></div>
   <script src="config.js"></script>
   <script src="icons.js"></script>
-  <script>  
-    const editableDiv = document.getElementById('editable');
-    const storageKey = 'editableContent';
 
-    // Load saved content
-    const savedContent = localStorage.getItem(storageKey);
-    if (savedContent) {
-      editableDiv.innerHTML = savedContent;
-    }
-
-    // Save content on input
-    editableDiv.addEventListener('input', () => {
-      localStorage.setItem(storageKey, editableDiv.innerHTML);
-    });</script>
 </body>
 
 </html>
